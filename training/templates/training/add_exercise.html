@@ -1,0 +1,10 @@
+<h1>Add Exercise</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save exercise</button>    
+</form>
+
+<a href="{% url 'workout_detail' workout.id %}">
+    <button type="submit">Back</button>
+</a>    

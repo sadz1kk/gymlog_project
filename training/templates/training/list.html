@@ -1,0 +1,16 @@
+<h1>My GYMLOG</h1>
+<ol>
+    {% for wo in workout %} 
+        <li>
+            <strong>{{ wo.workout }}</strong> 
+            Name: {{ wo.workoutname }} Duration: {{ wo.duration }} 
+            Date: {{ wo.date }}
+            <a href="{% url 'workout_detail' wo.id%}"> Check details</a>
+            <a href="{% url 'delete_workout' wo.id%}">Delete Workout</a>
+    {% empty %}
+        <li>Empty</li>
+    {% endfor %}
+    
+</ol>
+
+<a href="{% url 'add_workout' %}">➕ ADD NEW WORKOUT</a>

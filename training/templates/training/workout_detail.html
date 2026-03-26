@@ -1,0 +1,26 @@
+<h1>Details of Workout</h1>
+<p>Name of workout: {{workout.workoutname}}</p>
+<p>Duration of workout: {{workout.duration}}</p>
+<p>Date of workout: {{workout.date}}</p>
+
+<h3>Exercises in this workout:</h3>
+<ul>
+    {% for ex in exercises %}
+        <li>
+            <strong>{{ ex.name }}</strong>: 
+            {{ ex.weight }} kg | {{ ex.sets }} sets | {{ ex.reps }} reps
+            
+            <a href="{% url 'delete_exercise' ex.id %}" style="color: red; margin-left: 10px;">[Delete]</a>
+        </li>
+    {% empty %}
+        <li>No exercises added to this workout yet.</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'exercise_list' %}">
+        <button type="button">Home Page</button>
+</a>
+
+<a href="{% url 'add_exercise' workout.id %}">
+    <button type="button">➕ Add Exercise to this workout</button>
+</a>
