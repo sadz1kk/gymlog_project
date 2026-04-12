@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %} | GymTracker: Your Personal Fitness Log</title>
+    <meta content = "GymTracker is your ultimate fitness companion, designed to help you track your workouts, monitor progress, and achieve your fitness goals. With a user-friendly interface and powerful features, GymTracker makes it easy to log exercises, set goals, and stay motivated on your fitness journey." name="description">
+    <meta content="Sadz1k" name="author">
+</head>
+<body>
+    {% block header %}
+        {% include "training/partials/top-bar.html" %}
+    {% endblock header %}
+
+    {% block content %}
+    
+    {% endblock content %}
+
+    {% block footer %}
+        {% include "training/partials/footer.html" %}
+    {% endblock footer %}
+
+</body>
+</html> 

@@ -24,3 +24,7 @@
 <a href="{% url 'add_exercise' workout.id %}">
     <button type="button">➕ Add Exercise to this workout</button>
 </a>
+
+{% block footer%}
+    {% include "training/partials/footer.html" %}
+{% endblock footer%}

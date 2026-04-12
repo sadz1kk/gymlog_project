@@ -6,6 +6,15 @@ from .forms import WorkoutForm
 
 # Create your views here.
 
+def home(request):
+     return render(request, 'training/home.html')
+
+def about(request):
+     return render(request, 'training/about.html')
+
+def contact(request):
+     return render(request, 'training/contact.html')
+
 def exercise_list(request):
     workout = Workout.objects.all()
     return render(request, 'training/list.html', {'workout': workout})

@@ -14,3 +14,10 @@
 </ol>
 
 <a href="{% url 'add_workout' %}">➕ ADD NEW WORKOUT</a>
+<ul>
+    <li><a href="{% url 'home' %}">Home</a></li>
+</ul>  
+
+{% block footer%}
+    {% include "training/partials/footer.html" %}
+{% endblock footer%}

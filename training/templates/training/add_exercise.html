@@ -7,4 +7,8 @@
 
 <a href="{% url 'workout_detail' workout.id %}">
     <button type="submit">Back</button>
-</a>    
+</a> 
+
+{% block footer%}
+    {% include "training/partials/footer.html" %}
+{% endblock footer%}
