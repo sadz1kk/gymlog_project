@@ -1,12 +1,20 @@
-{%block header %}
-    <div>
-        <h1>GymTracker: Your Personal Fitness Log</h1>
-        <p>Track your workouts, monitor progress, and achieve your fitness goals with GymTracker.</p>
-    </div>
+{% load static %}
+{% block header %}
 
-    <div>
-            <a href="{% url 'home' %}">Home</a> |
-            <a href="{% url 'about' %}">About us</a> | 
-            <a href="{% url 'contact' %}">Contact us</a>
+<div class="border-bottom pb-3 py-4 container-fluid bungee-regular">
+    <div class="d-flex align-items-center justify-content-center">
+        <a class="navbar-brand" href={% url 'home' %}>
+
+        <img src="{% static 'images/logos/gtlogo.png' %}" alt="GymTracker" class="my-logo mx-auto" >
+
+        </a>
+
+        <div class="text-start">
+            <h1 class="mb-0">GymTracker: Your Personal Fitness Log</h1>
+            <p class="mb-0 text-muted">Track your workouts, monitor progress, and achieve your fitness goals with GymTracker.</p>
+        </div>
+
     </div>
+</div>
+
 {% endblock header %}

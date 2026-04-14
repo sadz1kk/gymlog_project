@@ -1,0 +1,35 @@
+/* Zmienne */
+:root {
+    --navbar-bg: #dde8fa;
+}
+
+/* Kolor tła całej strony */
+body{
+    background-color: #f5f7fa;
+}
+
+/* Kolor tła navbar'a*/
+.navbar-background{
+    background-color: var(--navbar-bg);
+}
+
+/* Czcionka dla nagłówków */
+.bungee-regular {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Logo */
+.my-logo{
+    height: 150px; 
+    width: auto;
+    display: block;
+}
+
+/* CSS dla menu */
+.menu li a:hover{
+    color:#54e0c4;
+    font-weight:600;
+
+}
