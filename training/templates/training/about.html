@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
+
+    {% block css %}
+        {% include "training/partials/bootstrapcss.html" %}
+    {% endblock css%}
 </head>
+
 <body>
-    <h1>About us</h1>
+    {% block header %}
+    {% include "training/partials/top-bar.html"%}
+    {% endblock header%}
+
+    <h1 class="display-1">About us</h1>
     <p>The website aims to help users keep training logs and achieve their fitness goals.</p>
-    <ul>
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'contact' %}">Contact us</a></li>
-    </ul>
+
 </body>
 </html>
 
