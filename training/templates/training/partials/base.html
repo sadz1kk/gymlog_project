@@ -13,33 +13,28 @@
     {% endblock css %}
 </head>
 
-<body>
-
-    {% block header %}
+<body class="d-flex flex-column min-vh-100"> {% block header %}
         {% include "./top-bar.html" %}
     {% endblock header %}
-    
-    <div class=navbar-background>
 
-    {%block navbar%}
-        {% include "./navbar.html"%}
-    {% endblock navbar%}
-
+    <div class="navbar-background">
+        {% block navbar %}
+            {% include "./navbar.html" %}
+        {% endblock navbar %}
     </div>
 
-    {% block content %}
-    
-    {% endblock content %}
+    <main class="flex-grow-1">
+        {% block content %}
+        {% endblock content %}
+    </main>
 
     {% block footer %}
         {% include "./footer.html" %}
     {% endblock footer %}
 
-
     {% block js %}
-        <!-- BOOTSTRAP JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    {% endblock js %}
+        {% endblock js %}
+
 </body>
 
 </html> 

@@ -6,6 +6,10 @@
 /* Kolor tła całej strony */
 body{
     background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% wysokości okna przeglądarki */
+    margin: 0;
 }
 
 /* Kolor tła navbar'a*/
@@ -32,4 +36,9 @@ body{
     color:#54e0c4;
     font-weight:600;
 
+}
+
+
+main, .content-wrapper { 
+    flex: 1; 
 }

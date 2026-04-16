@@ -1,31 +1,13 @@
-{% load static  %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us</title>
-    
-    {% block css %}
-        {%include "training/partials/bootstrapcss.html"%}
-    {% endblock css %}
+{% extends "training/partials/base.html" %}
 
-</head>
-
-{% block header %}
-{% include "training/partials/top-bar.html"%}
-{% endblock header%}
-
+{% block title %}Contact us{% endblock %}
 
 {% block content %}
-    <form method = "POST" class = "text-center py-3">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type = "submit"  class="btn btn-primary" >Send</button>
-    </form>
- {% endblock content%}
-
-
-{% block footer%}
-    {% include "training/partials/footer.html" %}
-{% endblock footer%}
+    <div class="container">
+        <form method="POST" class="text-center py-3">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+{% endblock content %}

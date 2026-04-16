@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
+{% extends "training/partials/base.html" %} {% block title %}About us{% endblock %}
 
-    {% block css %}
-        {% include "training/partials/bootstrapcss.html" %}
-    {% endblock css%}
-</head>
-
-<body>
-    {% block header %}
-    {% include "training/partials/top-bar.html"%}
-    {% endblock header%}
-
-    <h1 class="display-1">About us</h1>
-    <p>The website aims to help users keep training logs and achieve their fitness goals.</p>
-
-</body>
-</html>
-
-{% block footer%}
-    {% include "training/partials/footer.html" %}
-{% endblock footer%}    
+{% block content %}
+    <div class="container text-center py-5">
+        <h1 class="display-1">About us</h1>
+        <p>The website aims to help users keep training logs and achieve their fitness goals.</p>
+    </div>
+{% endblock content %}
