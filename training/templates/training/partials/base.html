@@ -8,19 +8,8 @@
     <meta content = "GymTracker is your ultimate fitness companion, designed to help you track your workouts, monitor progress, and achieve your fitness goals. With a user-friendly interface and powerful features, GymTracker makes it easy to log exercises, set goals, and stay motivated on your fitness journey." name="description">
     <meta content="Sadz1k" name="author">
 
-        <!-- GOOGLE FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-        
     {% block css %}
-
-    <!-- BOOTSTRAP -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!--BOOTSTRAPICONS-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        {%include "training/partials/bootstrapcss.html"%}
     {% endblock css %}
 </head>
 

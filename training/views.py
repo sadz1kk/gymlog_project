@@ -3,6 +3,7 @@ from .models import Workout
 from .models import Exercise
 from .forms import ExerciseForm
 from .forms import WorkoutForm
+from .forms import ContactForm
 
 # Create your views here.
 
@@ -14,6 +15,11 @@ def about(request):
 
 def contact(request):
      return render(request, 'training/contact.html')
+
+def from_examples(request):
+     form = ContactForm()
+     return render(request, 'training/contact.html', {'form': form})
+
 
 def exercise_list(request):
     workout = Workout.objects.all()
